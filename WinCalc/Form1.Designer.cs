@@ -47,14 +47,14 @@
             EqualsButton = new Button();
             Field = new TextBox();
             button1 = new Button();
-            Field2 = new TextBox();
             SuspendLayout();
             // 
             // Number7
             // 
-            Number7.Location = new Point(44, 189);
+            Number7.Location = new Point(50, 252);
+            Number7.Margin = new Padding(3, 4, 3, 4);
             Number7.Name = "Number7";
-            Number7.Size = new Size(56, 39);
+            Number7.Size = new Size(64, 52);
             Number7.TabIndex = 0;
             Number7.Text = "7";
             Number7.UseVisualStyleBackColor = true;
@@ -62,9 +62,10 @@
             // 
             // Number8
             // 
-            Number8.Location = new Point(117, 189);
+            Number8.Location = new Point(134, 252);
+            Number8.Margin = new Padding(3, 4, 3, 4);
             Number8.Name = "Number8";
-            Number8.Size = new Size(56, 39);
+            Number8.Size = new Size(64, 52);
             Number8.TabIndex = 1;
             Number8.Text = "8";
             Number8.UseVisualStyleBackColor = true;
@@ -72,9 +73,10 @@
             // 
             // Number9
             // 
-            Number9.Location = new Point(196, 189);
+            Number9.Location = new Point(224, 252);
+            Number9.Margin = new Padding(3, 4, 3, 4);
             Number9.Name = "Number9";
-            Number9.Size = new Size(56, 39);
+            Number9.Size = new Size(64, 52);
             Number9.TabIndex = 2;
             Number9.Text = "9";
             Number9.UseVisualStyleBackColor = true;
@@ -82,9 +84,10 @@
             // 
             // Number4
             // 
-            Number4.Location = new Point(44, 244);
+            Number4.Location = new Point(50, 325);
+            Number4.Margin = new Padding(3, 4, 3, 4);
             Number4.Name = "Number4";
-            Number4.Size = new Size(56, 39);
+            Number4.Size = new Size(64, 52);
             Number4.TabIndex = 3;
             Number4.Text = "4";
             Number4.UseVisualStyleBackColor = true;
@@ -92,9 +95,10 @@
             // 
             // Number5
             // 
-            Number5.Location = new Point(117, 244);
+            Number5.Location = new Point(134, 325);
+            Number5.Margin = new Padding(3, 4, 3, 4);
             Number5.Name = "Number5";
-            Number5.Size = new Size(56, 39);
+            Number5.Size = new Size(64, 52);
             Number5.TabIndex = 4;
             Number5.Text = "5";
             Number5.UseVisualStyleBackColor = true;
@@ -102,9 +106,10 @@
             // 
             // Number6
             // 
-            Number6.Location = new Point(196, 244);
+            Number6.Location = new Point(224, 325);
+            Number6.Margin = new Padding(3, 4, 3, 4);
             Number6.Name = "Number6";
-            Number6.Size = new Size(56, 39);
+            Number6.Size = new Size(64, 52);
             Number6.TabIndex = 5;
             Number6.Text = "6";
             Number6.UseVisualStyleBackColor = true;
@@ -112,9 +117,10 @@
             // 
             // Number1
             // 
-            Number1.Location = new Point(44, 299);
+            Number1.Location = new Point(50, 399);
+            Number1.Margin = new Padding(3, 4, 3, 4);
             Number1.Name = "Number1";
-            Number1.Size = new Size(56, 39);
+            Number1.Size = new Size(64, 52);
             Number1.TabIndex = 6;
             Number1.Text = "1";
             Number1.UseVisualStyleBackColor = true;
@@ -122,9 +128,10 @@
             // 
             // Number2
             // 
-            Number2.Location = new Point(117, 299);
+            Number2.Location = new Point(134, 399);
+            Number2.Margin = new Padding(3, 4, 3, 4);
             Number2.Name = "Number2";
-            Number2.Size = new Size(56, 39);
+            Number2.Size = new Size(64, 52);
             Number2.TabIndex = 7;
             Number2.Text = "2";
             Number2.UseVisualStyleBackColor = true;
@@ -132,9 +139,10 @@
             // 
             // Number3
             // 
-            Number3.Location = new Point(196, 299);
+            Number3.Location = new Point(224, 399);
+            Number3.Margin = new Padding(3, 4, 3, 4);
             Number3.Name = "Number3";
-            Number3.Size = new Size(56, 39);
+            Number3.Size = new Size(64, 52);
             Number3.TabIndex = 8;
             Number3.Text = "3";
             Number3.UseVisualStyleBackColor = true;
@@ -142,9 +150,10 @@
             // 
             // Number0
             // 
-            Number0.Location = new Point(44, 361);
+            Number0.Location = new Point(50, 481);
+            Number0.Margin = new Padding(3, 4, 3, 4);
             Number0.Name = "Number0";
-            Number0.Size = new Size(56, 39);
+            Number0.Size = new Size(64, 52);
             Number0.TabIndex = 9;
             Number0.Text = "0";
             Number0.UseVisualStyleBackColor = true;
@@ -152,49 +161,54 @@
             // 
             // MinusButton
             // 
-            MinusButton.Location = new Point(284, 299);
+            MinusButton.Location = new Point(325, 399);
+            MinusButton.Margin = new Padding(3, 4, 3, 4);
             MinusButton.Name = "MinusButton";
-            MinusButton.Size = new Size(56, 39);
+            MinusButton.Size = new Size(64, 52);
             MinusButton.TabIndex = 10;
             MinusButton.Text = "-";
             MinusButton.UseVisualStyleBackColor = true;
-            MinusButton.Click += MinusButton_Click;
+            MinusButton.Click += Input;
             // 
             // DivisionButton
             // 
-            DivisionButton.Location = new Point(284, 189);
+            DivisionButton.Location = new Point(325, 252);
+            DivisionButton.Margin = new Padding(3, 4, 3, 4);
             DivisionButton.Name = "DivisionButton";
-            DivisionButton.Size = new Size(56, 39);
+            DivisionButton.Size = new Size(64, 52);
             DivisionButton.TabIndex = 11;
             DivisionButton.Text = "/";
             DivisionButton.UseVisualStyleBackColor = true;
-            DivisionButton.Click += DivisionButton_Click;
+            DivisionButton.Click += Input;
             // 
             // MultButton
             // 
-            MultButton.Location = new Point(284, 244);
+            MultButton.Location = new Point(325, 325);
+            MultButton.Margin = new Padding(3, 4, 3, 4);
             MultButton.Name = "MultButton";
-            MultButton.Size = new Size(56, 39);
+            MultButton.Size = new Size(64, 52);
             MultButton.TabIndex = 12;
             MultButton.Text = "*";
             MultButton.UseVisualStyleBackColor = true;
-            MultButton.Click += MultButton_Click;
+            MultButton.Click += Input;
             // 
             // PlusButton
             // 
-            PlusButton.Location = new Point(284, 361);
+            PlusButton.Location = new Point(325, 481);
+            PlusButton.Margin = new Padding(3, 4, 3, 4);
             PlusButton.Name = "PlusButton";
-            PlusButton.Size = new Size(56, 39);
+            PlusButton.Size = new Size(64, 52);
             PlusButton.TabIndex = 13;
             PlusButton.Text = "+";
             PlusButton.UseVisualStyleBackColor = true;
-            PlusButton.Click += PlusButton_Click;
+            PlusButton.Click += Input;
             // 
             // Point
             // 
-            Point.Location = new Point(117, 361);
+            Point.Location = new Point(134, 481);
+            Point.Margin = new Padding(3, 4, 3, 4);
             Point.Name = "Point";
-            Point.Size = new Size(56, 39);
+            Point.Size = new Size(64, 52);
             Point.TabIndex = 14;
             Point.Text = ".";
             Point.UseVisualStyleBackColor = true;
@@ -202,9 +216,10 @@
             // 
             // button16
             // 
-            button16.Location = new Point(196, 361);
+            button16.Location = new Point(224, 481);
+            button16.Margin = new Padding(3, 4, 3, 4);
             button16.Name = "button16";
-            button16.Size = new Size(56, 39);
+            button16.Size = new Size(64, 52);
             button16.TabIndex = 15;
             button16.Text = "C";
             button16.UseVisualStyleBackColor = true;
@@ -212,43 +227,39 @@
             // 
             // EqualsButton
             // 
-            EqualsButton.Location = new Point(362, 361);
+            EqualsButton.Location = new Point(414, 481);
+            EqualsButton.Margin = new Padding(3, 4, 3, 4);
             EqualsButton.Name = "EqualsButton";
-            EqualsButton.Size = new Size(56, 39);
+            EqualsButton.Size = new Size(64, 52);
             EqualsButton.TabIndex = 16;
             EqualsButton.Text = "=";
             EqualsButton.UseVisualStyleBackColor = true;
+            EqualsButton.Click += EqualsButton_Click;
             // 
             // Field
             // 
-            Field.Location = new Point(44, 106);
+            Field.Location = new Point(50, 141);
+            Field.Margin = new Padding(3, 4, 3, 4);
             Field.Name = "Field";
-            Field.Size = new Size(296, 23);
+            Field.Size = new Size(338, 27);
             Field.TabIndex = 17;
             // 
             // button1
             // 
-            button1.Location = new Point(362, 189);
+            button1.Location = new Point(414, 252);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(56, 39);
+            button1.Size = new Size(64, 52);
             button1.TabIndex = 18;
             button1.Text = "<=";
             button1.UseVisualStyleBackColor = true;
             button1.Click += Backspace;
             // 
-            // Field2
-            // 
-            Field2.Location = new Point(209, 58);
-            Field2.Name = "Field2";
-            Field2.Size = new Size(131, 23);
-            Field2.TabIndex = 19;
-            // 
             // Calculator
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(432, 542);
-            Controls.Add(Field2);
+            ClientSize = new Size(494, 723);
             Controls.Add(button1);
             Controls.Add(Field);
             Controls.Add(EqualsButton);
@@ -268,6 +279,7 @@
             Controls.Add(Number9);
             Controls.Add(Number8);
             Controls.Add(Number7);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Calculator";
             Text = "Calculator";
             TopMost = true;
@@ -296,6 +308,5 @@
         private Button EqualsButton;
         private TextBox Field;
         private Button button1;
-        private TextBox Field2;
     }
 }
