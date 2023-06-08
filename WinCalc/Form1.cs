@@ -1,3 +1,4 @@
+using System.Text.Json;
 namespace WinCalc
 {
     enum ButtonPressed
@@ -66,7 +67,8 @@ namespace WinCalc
                 }
 
                 this.Field.Text += btn.Text;
-                value = Convert.ToDouble(this.Field.Text);
+                if(btn != Point)
+                    value = Convert.ToDouble(this.Field.Text);
 
             }
         }
@@ -109,6 +111,8 @@ namespace WinCalc
                     this.Field.Text = (value2 * value).ToString();
                     break;
                 case 3:
+                    if (value == 0 || value2 == 0)
+                        throw new DivideByZeroException();
                     this.Field.Text = (value2 / value).ToString();
                     break;
             }
