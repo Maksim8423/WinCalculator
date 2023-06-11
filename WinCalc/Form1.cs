@@ -1,4 +1,5 @@
 using System.Text.Json;
+
 namespace WinCalc
 {
     enum ButtonPressed
@@ -13,6 +14,8 @@ namespace WinCalc
         bool flag = false;
         double value, value2;
         int button;
+        Log log = new Log();
+        string json;
 
         ButtonPressed buttonPressed = default;
 
@@ -23,7 +26,7 @@ namespace WinCalc
 
         private void Input(object sender, EventArgs e)
         {
-            
+
             if (sender is Button)
             {
                 Button btn = (Button)sender;
@@ -39,6 +42,8 @@ namespace WinCalc
                 }
                 if (btn == PlusButton)
                 {
+                    Point.Enabled = true;
+
                     this.Field.Text = null;
                     value2 = value;
                     button = (int)ButtonPressed.Plus;
@@ -46,6 +51,8 @@ namespace WinCalc
                 }
                 if (btn == MinusButton)
                 {
+                    Point.Enabled = true;
+
                     this.Field.Text = null;
                     value2 = value;
                     button = (int)ButtonPressed.Minus;
@@ -53,6 +60,8 @@ namespace WinCalc
                 }
                 if (btn == MultButton)
                 {
+                    Point.Enabled = true;
+
                     this.Field.Text = null;
                     value2 = value;
                     button = (int)ButtonPressed.Mult;
@@ -60,6 +69,8 @@ namespace WinCalc
                 }
                 if (btn == DivisionButton)
                 {
+                    Point.Enabled = true;
+
                     this.Field.Text = null;
                     value2 = value;
                     button = (int)ButtonPressed.Division;
@@ -67,10 +78,11 @@ namespace WinCalc
                 }
 
                 this.Field.Text += btn.Text;
-                if(btn != Point)
+                if (btn != Point)
                     value = Convert.ToDouble(this.Field.Text);
 
             }
+
         }
 
         private void Clear(object sender, EventArgs e)
@@ -78,6 +90,8 @@ namespace WinCalc
             this.Field.Text = null;
             value = default;
             value2 = default;
+            HistoryBox.Items.Clear();
+            Log.ClearJson();
 
             flag = false;
         }
@@ -99,23 +113,39 @@ namespace WinCalc
 
         private void EqualsButton_Click(object sender, EventArgs e)
         {
+            Point.Enabled = true;
             switch (button)
             {
                 case 0:
                     this.Field.Text = (value2 + value).ToString();
+                    log.SaveJson(value2.ToString() + " + " + value.ToString() + " = " + (value2 + value).ToString() + "\n");
+
                     break;
                 case 1:
                     this.Field.Text = (value2 - value).ToString();
+                    log.SaveJson(value2.ToString() + " - " + value.ToString() + " = " + (value2 - value).ToString() + "\n");
+
                     break;
                 case 2:
                     this.Field.Text = (value2 * value).ToString();
+                    log.SaveJson(value2.ToString() + " * " + value.ToString() + " = " + (value2 * value).ToString() + "\n");
+
                     break;
                 case 3:
                     if (value == 0 || value2 == 0)
                         throw new DivideByZeroException();
                     this.Field.Text = (value2 / value).ToString();
+                    log.SaveJson(value2.ToString() + " / " + value.ToString() + " = " + (value2 / value).ToString() + "\n");
+
                     break;
             }
+            HistoryBox.Items.Add(Log.LoadJson());
+            this.Field.Text = null;
+        }
+
+        private void Calculator_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Log.ClearJson();
         }
     }
 }
